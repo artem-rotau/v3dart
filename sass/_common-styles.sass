@@ -1,0 +1,515 @@
+
+.slider
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 1000
+    width: 100%
+    height: 100vh
+    background-color: rgba(0,0,0, .8)
+    overflow: auto
+
+    .slide-wrapper
+        display: flex
+        align-items: center
+
+        .slide-content
+            display: flex
+            align-items: center
+
+
+        .slide-inner
+            display: flex
+            justify-content: center
+            height: 100vh
+            overflow: hidden
+            cursor: zoom-in
+
+            .slide-img
+
+            .slide-img-big
+                width: 100%
+                margin: 5px
+
+        .slide-inner-big
+            width: 100%
+            height: 100%
+            cursor: zoom-out
+                
+    .arrows
+
+        .arrow
+            position: fixed
+            top: 0
+            z-index: 100
+            width: 10%
+            height: 100vh
+            cursor: pointer
+            transition: .2s all
+
+        .next
+            right: 0
+
+            .arrow-n
+                position: absolute
+                right: 50%
+                top: 50%
+                transform: rotate(-45deg)
+                width: 20px
+                height: 20px
+                border: 3px solid #fff
+                border-radius: 2px
+                border-left: none
+                border-top: none
+
+            &:hover
+                background-color: rgba(255,255,255, .1)
+
+        .prev
+
+            .arrow-p
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: rotate(135deg)
+                width: 20px
+                height: 20px
+                border: 3px solid #fff
+                border-radius: 2px
+                border-left: none
+                border-top: none
+
+            &:hover
+                background-color: rgba(255,255,255, .1)
+
+    .cross
+        position: fixed
+        top: 5%
+        right: 15%
+        z-index: 1000
+        width: 20px
+        height: 20px
+        padding: 20px
+        border-radius: 50%
+        background-color: rgba(0,0,0, .5)
+        cursor: pointer
+        transition: .2s all
+
+    .cross:before
+        content: ""
+        position: absolute
+        top: 45%
+        left: 25%
+        z-index: 1
+        width: 20px
+        height: 3px
+        background-color: #fff
+        border-radius: 4px
+        transform: rotate(45deg)
+
+    .cross:after
+        content: ""
+        position: absolute
+        top: 45%
+        left: 25%
+        z-index: 1
+        width: 20px
+        height: 3px
+        background-color: #fff
+        border-radius: 4px
+        transform: rotate(-45deg)
+
+    .cross:hover
+        background-color: rgba(255,255,255, .3)
+
+
+    .block-none
+        display: none
+
+
+
+
+.common-styles
+    width: 100%
+    padding: 60px 30px
+    padding-bottom: 120px
+    margin: 0 auto
+
+    .chapter
+
+    .common-styles-wrapper
+        display: flex
+        justify-content: center
+
+        .main-img
+            max-width: 480px
+            max-height: 720px
+            overflow: hidden
+
+            .img
+                width: 100%
+                // border: 2px solid #4e5b71
+                // border: 2px solid #fff
+
+        .wrapper-right
+            width: 35%
+            margin: 20px 60px
+
+            .inner-content
+                width: 100%
+                text-align: center
+                margin: 0 auto
+                margin-bottom: 30px
+
+                .img-wrapper
+                    display: flex
+                    justify-content: center
+                    flex-wrap: wrap
+
+                    .img-block-right
+                        width: 100px
+                        height: 100px
+                        margin: 5px
+                        // border: 2px solid #4e5b71
+                        border: 2px solid #fff
+                        // box-shadow: 0px 8px 4px 0px rgba(0,0,0, .2)
+                        overflow: hidden
+                        cursor: pointer
+                        transition: .2s all
+
+                        .img-right
+                            position: relative
+                            top: 0
+                            left: 50%
+                            z-index: -1
+                            transform: translateX(-50%)
+                            width: 200%
+
+                    .img-block-right:hover
+                        border-color: #000
+                        box-shadow: 0px 0px 10px 3px rgba(255,255,255, 1)
+
+            .title
+                text-align: center
+
+                .title-info
+                    display: block
+                    justify-content: space-between
+
+                    .info
+                        position: relative
+                        margin: 10px 0
+                        color: #4e5b71
+
+                        .info-wrapper
+                            display: flex
+                            cursor: pointer
+                            box-shadow: 0px 22px 14px 0px rgba(0,0,0, .2)
+
+                            .info-arrow
+                                position: relative
+                                z-index: 1
+                                width: 40px
+                                padding: 10px 20px
+                                border: 2px solid #4e5b71
+                                background-color: #fff
+                                cursor: pointer
+
+                                .arrow-inner
+                                    position: absolute
+                                    top: 35%
+                                    left: 30%
+                                    width: 10px
+                                    height: 10px
+                                    border: 2px solid #4e5b71
+                                    border-top: none
+                                    border-right: none
+                                    transform: rotate(-135deg)
+                                    transition: .3s all
+
+                                .arrow-active
+                                    transform: rotate(-45deg)
+                                    left: 40%
+
+
+                            .info-title
+                                position: relative
+                                z-index: 1
+                                border: 2px solid #4e5b71
+                                border-left: none
+                                width: 100%
+                                padding: 10px 5px
+                                font-weight: 700
+                                background-color: #fff
+
+                        .info-descr
+                            transition: .2s all
+                            opacity: 0
+
+                        .info-descr-active
+                            height: 60px
+                            padding-top: 20px
+                            background-color: #fff
+                            box-shadow: 0px 22px 14px 0px rgba(0,0,0, .2)
+                            border: 2px solid #4e5b71
+                            border-top: none
+                            opacity: 1
+
+
+
+// Media
+
+
+@media screen and (max-width: 1499px)
+    .slider
+
+        .slide-wrapper
+
+            .slide-inner
+                display: flex
+                align-items: center
+
+                .slide-img
+                    max-height: 620px
+
+                .slide-img-big
+                    width: 100%
+                    max-height: 100%
+                    margin: 5px
+
+            .slide-inner-big
+                width: 100%
+                height: 100%
+                cursor: zoom-out
+
+
+@media screen and (max-width: 1328px)
+
+    .chapter
+        margin-top: 20px
+
+    .common-styles
+
+        .common-styles-wrapper
+
+            .main-img
+                max-width: 420px
+
+                
+            .wrapper-right
+                margin: 0 30px
+
+                .inner-content
+
+                    .img-wrapper
+
+                        .img-block-right
+                            width: 90px
+                            height: 90px
+
+@media screen and (max-width: 1099px)
+
+    .common-styles
+
+        .chapter
+
+            .chapter-dancer
+                width: 160px
+                font-size: 22px
+
+
+@media screen and (max-width:  999px)
+    .slider
+
+        .slide-wrapper
+
+            .slide-inner
+
+                .slide-img
+                    max-height: 520px
+
+                .slide-img-big
+                    width: 100%
+                    max-height: 100%
+                    margin: 5px
+
+            .slide-inner-big
+                width: 100%
+                height: 100%
+                cursor: zoom-out
+
+@media screen and (max-width: 899px)
+    .slider
+
+        .slide-wrapper
+
+            .slide-inner
+
+                .slide-img
+                    max-height: 420px
+
+                .slide-img-big
+                    width: 100%
+                    max-height: 100%
+                    margin: 5px
+
+            .slide-inner-big
+                width: 100%
+                height: 100%
+                cursor: zoom-out
+
+
+@media screen and (max-width:  799px)
+    .slider
+
+        .slide-wrapper
+
+            .slide-inner
+
+                .slide-img
+                    max-height: 380px
+
+                .slide-img-big
+                    width: 100%
+                    max-height: 100%
+                    margin: 5px
+
+            .slide-inner-big
+                width: 100%
+                height: 100%
+                cursor: zoom-out
+
+
+    .common-styles
+        padding-bottom: 60px
+
+        .chapter
+            margin-top: 80px
+            margin-bottom: 20px
+
+        .common-styles-wrapper
+            flex-direction: column
+            
+            .main-img
+                max-width: 420px
+                margin: 0 auto
+
+            .wrapper-right
+                width: 100%
+                margin: 10px auto
+
+                .title
+
+                    .title-info
+
+                        .info
+                            max-width: 600px
+                            margin: 10px auto
+
+@media screen and (max-width: 599px)
+    .slider
+
+        .slide-wrapper
+
+            .slide-inner
+
+                .slide-img
+                    max-height: 320px
+
+                .slide-img-big
+                    width: 100%
+                    max-height: 100%
+                    margin: 5px
+
+            .slide-inner-big
+                width: 100%
+                height: 100%
+                cursor: zoom-out
+
+
+@media screen and (max-width: 499px)
+    .slider
+
+        .slide-wrapper
+
+            .slide-inner
+
+                .slide-img
+                    max-width: 620px
+                    max-height: 220px
+
+                .slide-img-big
+                    width: 100%
+                    max-height: 100%
+                    margin: 5px
+
+            .slide-inner-big
+                width: 100%
+                height: 100%
+                cursor: zoom-out
+
+    .common-styles
+
+        .chapter
+            margin-top: 60px
+            font-size: 26px
+
+        .common-styles-wrapper
+
+            .main-img
+                max-height: 580px
+                
+            .wrapper-right
+
+                .inner-content
+
+                    .img-wrapper
+
+                        .img-block-right
+                            width: 80px
+                            height: 80px
+
+
+@media screen and (max-width: 399px)
+    .slider
+
+        .slide-wrapper
+
+            .slide-inner
+
+                .slide-img
+                    max-height: 180px
+
+                .slide-img-big
+                    width: 100%
+                    max-height: 100%
+                    margin: 5px
+
+            .slide-inner-big
+                width: 100%
+                height: 100%
+                cursor: zoom-out
+
+    .common-styles
+
+        .chapter
+            font-size: 20px
+
+        .common-styles-wrapper
+
+            .main-img
+                max-height: 500px
+
+                
+            .wrapper-right
+
+                .inner-content
+
+                    .img-wrapper
+
+                        .img-block-right
+                            width: 60px
+                            height: 60px
+
+
+

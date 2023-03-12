@@ -1,0 +1,223 @@
+
+.header
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100%
+    max-width: 1920px
+    padding: 20px 200px
+    background-color: rgba(0,0,0, .5)
+
+    .autor
+        display: block
+        font-size: 42px
+        line-height: 40px
+        text-align: center
+        font-weight: 400
+        text-transform: uppercase
+        color: #fff
+
+    ul
+        display: flex
+        justify-content: space-between
+        list-style: none
+        align-items: center
+        margin-bottom: 0
+        padding: 0
+
+        li
+            font-size: 22px
+            letter-spacing: 2px
+            font-weight: 700
+
+            a,
+            .link-active
+                position: relative
+                z-index: 10
+                padding: 15px
+                color: #fff
+                transition: .3s all
+
+            .link-active:after
+                content: ""
+                display: block
+                position: absolute
+                bottom: 5px
+                left: 50%
+                transform: translateX(-50%)
+                z-index: 1
+                width: 60%
+                height: 2px
+                border-radius: 8px
+                background-color: #fff
+                transition: .3s all
+
+            a:after
+                width: 0
+                content: ""
+                display: block
+                position: absolute
+                bottom: 5px
+                left: 50%
+                transform: translateX(-50%)
+                z-index: 1
+                height: 2px
+                border-radius: 8px
+                background-color: #fff
+                transition: .3s all
+
+            a:hover:after
+                width: 60%
+
+        .links-list
+            display: flex
+
+            a
+                margin: 0 40px
+
+            a:last-child
+                margin-right: 0
+
+    .hamburger,
+    .hidden-menu,
+    .header-cross
+        display: none
+
+
+@media screen and (max-width: 1439px) 
+    .header
+        padding: 20px 100px
+
+        ul
+
+            .links-list
+                a
+                    margin: 0 20px
+
+                a:last-child
+                    margin-right: 0
+
+        
+@media screen and (max-width: 1199px)
+
+    .header
+        padding: 10px 50px
+        
+        .autor
+            font-size: 32px
+            line-height: 32px
+
+        ul
+            margin: 0
+
+            li
+                font-size: 18px
+
+
+@media screen and (max-width: 799px)
+    .header
+        position: fixed
+        z-index: 10
+        display: flex
+        align-items: center
+
+        ul
+            display: none
+
+
+        .hamburger,
+        .header-cross
+            position: absolute
+            z-index: 1
+            top: 5px
+            right: 20px
+            display: flex
+            align-items: center
+            width: 60px
+            height: 60px
+            cursor: pointer
+            opacity: 1
+            transition: .3s all
+
+            .line-wrapper,
+            .cross-wrapper
+                width: 100%
+
+                .line
+                    height: 3px
+                    background-color: #fff
+                    margin: 8px
+
+                .cross-line-top
+                    position: relative
+                    top: 3px
+                    transform: rotate(-45deg)
+                    margin: 0 8px
+
+                .cross-line-bottom
+                    transform: rotate(45deg)
+                    margin: 0 8px
+
+        
+        .hidden-hamburger
+            opacity: 0
+
+        .header-cross
+            margin-top: -60px
+            opacity: 0
+
+        .active-cross
+            margin-top: 0
+            opacity: 1
+
+
+        .hidden-menu
+            display: flex
+            position: fixed
+            left: -100%
+            top: 0
+            width: 70%
+            height: 100vh
+            background-color: #1c476eec
+            align-items: center
+            transition: .4s all
+
+            .hidden-menu-list
+                display: block
+                width: 100%
+
+                li
+                    margin: 20px 0
+                    text-align: center
+
+                    a
+                        display: inline-block
+                        width: 100%
+                        color: #fff
+                        background-color: rgba(0,0,0, .2)
+
+                    a:after
+                        display: none
+
+        .menu-active
+            left: 0
+
+
+
+    
+@media screen and (max-width: 499px)
+    .header
+        padding: 15px 25px
+
+        .autor
+            font-size: 22px
+            line-height: 26px
+    
+
+@media screen and (max-width: 339px)
+    .header
+
+        .autor
+            font-size: 18px
+            line-height: 22px
+    

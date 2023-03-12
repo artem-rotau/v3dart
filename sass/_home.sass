@@ -1,0 +1,169 @@
+.wish
+    margin: 0 auto
+    margin-top: 30px
+    padding: 20px
+    text-align: center
+    align-items: center
+
+    .wish-wrapper
+        max-width: 600px
+        margin: 0 auto
+
+        h1
+            margin: 0
+            font-size: 42px
+
+.chapter
+    position: relative
+    text-align: center
+    font-size: 32px
+    font-weight: 700
+    margin: 40px auto
+    
+.home
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    padding: 50px
+
+    .home-wrapper
+        display: flex
+        justify-content: center
+
+        .img-block
+            width: 25%
+            margin: 20px
+            border: 2px solid #fff
+            box-shadow: 0px 22px 14px 0px rgba(0,0,0, .3)
+            overflow: hidden
+
+            img
+                display: block
+                width: 100%
+
+        .active
+            position: relative
+            z-index: 0
+
+        .active:after
+            content: ""
+            position: absolute
+            bottom: 0px
+            right: -100%
+            padding: 20px 20px
+            transform: translateY(-50%)
+            background-color: #000000b5
+            border: 2px solid #fff
+            border-right: none
+            z-index: 1
+            color: #fff
+            font-size: 42px
+            text-align: right
+            transition: .4s
+
+        .active:hover:after
+            transition: .4s
+            right: 0%
+
+        .home-dancer:after
+            content: "Die Tänzerin"
+
+        .home-3d:after
+            content: "Der Elektriker"
+
+        .home-people:after
+            content: "Nostalgie"
+
+
+@media screen and (max-width: 1599px)
+    .home
+        .home-wrapper
+            .img-block
+
+            .active:after
+                font-size: 32px
+
+@media screen and (max-width: 1299px)
+    .home
+        .home-wrapper
+            .img-block
+
+            .active:after
+                font-size: 20px
+                padding: 15px
+
+@media screen and (max-width: 1099px)
+    .wish
+        .wish-wrapper
+            h1
+                font-size: 32px
+    .home
+        .home-wrapper
+            .img-block
+
+            .active:after
+                padding: 10px
+
+
+@media screen and (max-width: 899px)
+    .home
+        .home-wrapper
+            .img-block
+
+            .active:after
+                font-size: 18px
+           
+
+@media screen and (max-width: 799px)
+    .home
+        justify-content: space-around
+        padding: 30px
+        padding-top: 120px
+
+        .home-wrapper
+
+            .img-block
+                width: 40%
+                margin: 10px
+
+            .active:after
+            font-size: 26px
+
+    
+@media screen and (max-width: 699px)
+    .home
+        .home-wrapper
+            flex-wrap: wrap
+            .img-block
+
+            .active:after
+                font-size: 22px
+
+@media screen and (max-width: 599px)
+    .home
+        .home-wrapper
+            .img-block
+                width: 70%
+                margin-bottom: 60px
+
+            .active:after
+                font-size: 32px
+
+@media screen and (max-width: 499px)
+    .home
+        .home-wrapper
+            .img-block
+
+            .active:after
+                font-size: 26px
+
+@media screen and (max-width: 399px)
+    .wish
+        padding: 0
+    .home
+        .home-wrapper
+            .img-block
+                width: 100%
+
+            .active:after
+                font-size: 22px
