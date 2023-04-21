@@ -3,15 +3,18 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    position: fixed
+    z-index: 1000
     width: 100%
     max-width: 1920px
-    padding: 20px 200px
-    background-color: rgba(0,0,0, .5)
+    padding: 10px 200px
+    background-color: rgba(0,0,0, .8)
+    box-shadow: 0px 0px 14px 12px rgba(0,0,0, .4)
 
     .autor
         display: block
-        font-size: 42px
-        line-height: 40px
+        font-size: 22px
+        line-height: 30px
         text-align: center
         font-weight: 400
         text-transform: uppercase
@@ -22,19 +25,19 @@
         justify-content: space-between
         list-style: none
         align-items: center
-        margin-bottom: 0
         padding: 0
 
         li
-            font-size: 22px
+            font-size: 16px
             letter-spacing: 2px
             font-weight: 700
 
             a,
             .link-active
+                display: block
                 position: relative
                 z-index: 10
-                padding: 15px
+                padding: 5px
                 color: #fff
                 transition: .3s all
 
@@ -42,7 +45,7 @@
                 content: ""
                 display: block
                 position: absolute
-                bottom: 5px
+                bottom: -2px
                 left: 50%
                 transform: translateX(-50%)
                 z-index: 1
@@ -57,7 +60,7 @@
                 content: ""
                 display: block
                 position: absolute
-                bottom: 5px
+                bottom: -2px
                 left: 50%
                 transform: translateX(-50%)
                 z-index: 1
@@ -82,11 +85,18 @@
     .hidden-menu,
     .header-cross
         display: none
+.header-mod
+    top: -100%
+    transition: .3s all
+
+.header-active
+    top: 0
+    display: flex
 
 
 @media screen and (max-width: 1439px) 
     .header
-        padding: 20px 100px
+        padding: 10px 100px
 
         ul
 
@@ -102,10 +112,6 @@
 
     .header
         padding: 10px 50px
-        
-        .autor
-            font-size: 32px
-            line-height: 32px
 
         ul
             margin: 0
@@ -117,9 +123,7 @@
 @media screen and (max-width: 799px)
     .header
         position: fixed
-        z-index: 10
-        display: flex
-        align-items: center
+        z-index: 1000
 
         ul
             display: none
@@ -128,13 +132,12 @@
         .hamburger,
         .header-cross
             position: absolute
-            z-index: 1
-            top: 5px
-            right: 20px
+            top: 50%
+            right: 5%
+            transform: translateY(-50%)
             display: flex
-            align-items: center
             width: 60px
-            height: 60px
+            height: 40px
             cursor: pointer
             opacity: 1
             transition: .3s all
@@ -163,36 +166,38 @@
             opacity: 0
 
         .header-cross
-            margin-top: -60px
+            margin-top: -80px
             opacity: 0
 
         .active-cross
-            margin-top: 0
+            margin-top: 15px
             opacity: 1
 
 
         .hidden-menu
-            display: flex
+            display: block
             position: fixed
             left: -100%
             top: 0
             width: 70%
             height: 100vh
-            background-color: #1c476eec
-            align-items: center
+            padding-top: 40px
+            background: rgb(241,158,48)
+            background: linear-gradient(25deg, rgba(241,158,48,1) 33%, rgba(231,210,102,1) 100%)
+
+            box-shadow: 0px 0px 14px 8px rgba(0,0,0, .4)
             transition: .4s all
 
             .hidden-menu-list
                 display: block
-                width: 100%
+                margin-top: 140px
 
                 li
                     margin: 20px 0
                     text-align: center
 
                     a
-                        display: inline-block
-                        width: 100%
+                        padding: 15px 0
                         color: #fff
                         background-color: rgba(0,0,0, .2)
 
@@ -207,7 +212,7 @@
     
 @media screen and (max-width: 499px)
     .header
-        padding: 15px 25px
+        padding: 5px 20px
 
         .autor
             font-size: 22px

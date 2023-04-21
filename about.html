@@ -5,17 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/project.js" defer></script>
+    <script src="js/script.js" defer></script>
     <title>Über mich</title>
 </head>
 <body class="about-body">
-    <div class="preloader">
-        <div class="preloader-row">
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-        </div>
-    </div>
 
-    <div class="bg-img"></div>
     <header class="header">
         <a href="index.html">
             <span class="autor">Victor's<br>
@@ -47,6 +45,9 @@
         </div>
 
         <div class="hidden-menu">
+            <span class="autor">Victor's<br>
+                <span class="autor-down">3D Art</span>
+            </span>
             <ul class="hidden-menu-list">
                 <div class="hidden-links-list">
                     <li class="hidden-link"><a href="index.html">Projekte</a></li>
@@ -57,28 +58,31 @@
         </div>
     </header>
     
-    <section class="about">
-        <div class="about-wrapper">
-            <div class="about-inner">
-                <h2 class="about-name">Biography</h2>
-                <h3 class="about-name">A Few Words about Me</h3>
-                <h1 class="about-name">Hey, ich bin Viktor ...</h1>
-                <div class="about-line"></div>
-                <p class="about-descr">
-                    Ich bin Bauingenieur, aber seit meiner Kindheit liebe ich Kunst, Zeichnen, Bildhauerei und Musik. Und ich liebe es, die Dinge mit meinen eigenen Händen zu erschaffen und mit meinen Mitmenschen zu teilen. Das erfüllt mich mit größter Freude und Vergnügen.  Kunst und Musik heilen die Seele, aber nur die Liebe kann die Welt retten.
-                    Ein Talent soll allen Menschen einen Nutzen bringen und ich bin ständig auf der Suche nach etwas Neuem aber in einer realistischen und klassischen Ausrichtung.
-                    Meine Bilder waren schon immer mit einer gewissen Realität, Geschichte, Bedeutung, Schönheit und natürlich Humor verbunden.
-                </p>
-                <p class="about-descr">
-                    Mein größter Wunsch und Ziel ist es zu erreichen, dass meine Bilder eine positive Energie ausstrahlen. Dabei soll es unmöglich sein, vor lauter Staunen die Augen von meinen Werken abzuwenden.
-                </p>
-            </div>
+    <div class="wrapper">
+        <div class="content">
+            <section class="about">
+                <div class="about-wrapper">
+                    <div class="about-inner">
+                        <h2 class="about-name">Biography</h2>
+                        <h3 class="about-name">Ein paar Worte über mich</h3>
+                        <h1 class="about-name">Hey, ich bin Viktor ...</h1>
+                        <div class="about-line"></div>
+                        <p class="about-descr">
+                            Ich bin Bauingenieur, aber seit meiner Kindheit liebe ich Kunst, Zeichnen, Bildhauerei und Musik. Und ich liebe es, die Dinge mit meinen eigenen Händen zu erschaffen und mit meinen Mitmenschen zu teilen. Das erfüllt mich mit größter Freude und Vergnügen.  Kunst und Musik heilen die Seele, aber nur die Liebe kann die Welt retten.
+                            Ein Talent soll allen Menschen einen Nutzen bringen und ich bin ständig auf der Suche nach etwas Neuem aber in einer realistischen und klassischen Ausrichtung.
+                            Meine Bilder waren schon immer mit einer gewissen Realität, Geschichte, Bedeutung, Schönheit und natürlich Humor verbunden.
+                        </p>
+                        <p class="about-descr">
+                            Mein größter Wunsch und Ziel ist es zu erreichen, dass meine Bilder eine positive Energie ausstrahlen. Dabei soll es unmöglich sein, vor lauter Staunen die Augen von meinen Werken abzuwenden.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        
+            <footer class="footer about-footer">
+                <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
+            </footer>
         </div>
-    </section>
-
-    <footer class="footer about-footer">
-        <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
-    </footer>
-    <script src="js/script.js"></script>
+    </div>
 </body>
 </html>

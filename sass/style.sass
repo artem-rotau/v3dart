@@ -2,12 +2,20 @@
 
 
 *
-    box-sizing: border-box
-
-body
     padding: 0
     margin: 0
-    background: url("../img/dark_wood.png")
+    box-sizing: border-box
+
+// will-change
+.bg-brush6
+    will-change: transform
+
+
+
+
+body
+    background: rgb(241,158,48)
+    background: linear-gradient(25deg, rgba(241,158,48,1) 33%, rgba(231,210,102,1) 100%)
     font-family: 'Comfortaa', cursive
     color: #fff
     width: 100%
@@ -26,7 +34,14 @@ body
         z-index: -1
 
 
-
+.chapter
+    padding-top: 120px
+    font-size: 26px
+    font-weight: 700
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 3px
+    line-height: 42px
 
 
 @import "header";
@@ -35,6 +50,5 @@ body
 @import "footer";
 @import "imprint";
 @import "policy";
-@import "preloader";
 @import "about";
 @import "contacts";

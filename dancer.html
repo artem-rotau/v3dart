@@ -5,17 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/project.js" defer></script>
+    <script src="js/script.js" defer></script>
     <title>Die Tänzerin</title>
 </head>
-<body class="bg-body">   
-    <div class="preloader">
-        <div class="preloader-row">
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-        </div>
-    </div>
+<body>   
 
-    
     <header class="header">
         <a href="index.html">
             <span class="autor">Victor's<br>
@@ -47,6 +45,9 @@
         </div>
 
         <div class="hidden-menu">
+            <span class="autor">Victor's<br>
+                <span class="autor-down">3D Art</span>
+            </span>
             <ul class="hidden-menu-list">
                 <div class="hidden-links-list">
                     <li class="hidden-link"><a href="index.html">Projekte</a></li>
@@ -57,33 +58,32 @@
         </div>
     </header>
 
-
     <div class="slider">
         <div class="slide-wrapper">
             <div class="slide-content">
                 <div class="slide-inner">
-                    <img class="slide-img" src="img/slider/cats.jpg" alt="dancer">
+                    <img class="slide-img" src="img/slider/cats.webp" alt="dancer">
                 </div>
                 <div class="slide-inner">
-                    <img class="slide-img" src="img/slider/bcar.jpg" alt="dancer">
+                    <img class="slide-img" src="img/slider/bcar.webp" alt="dancer">
                 </div>
                 <div class="slide-inner">
-                    <img class="slide-img" src="img/slider/dino.jpg" alt="dancer">
+                    <img class="slide-img" src="img/slider/dino.webp" alt="dancer">
                 </div>
                 <div class="slide-inner">
-                    <img class="slide-img" src="img/slider/wcar1.jpg" alt="dancer">
+                    <img class="slide-img" src="img/slider/wcar1.webp" alt="dancer">
                 </div>
                 <div class="slide-inner">
-                    <img class="slide-img" src="img/slider/wcar2.jpg" alt="dancer">
+                    <img class="slide-img" src="img/slider/wcar2.webp" alt="dancer">
                 </div>
                 <div class="slide-inner">
-                    <img class="slide-img" src="img/slider/wcar3.jpg" alt="dancer">
+                    <img class="slide-img" src="img/slider/wcar3.webp" alt="dancer">
                 </div>
                 <div class="slide-inner">
-                    <img class="slide-img" src="img/slider/world.jpg" alt="dancer">
+                    <img class="slide-img" src="img/slider/world.webp" alt="dancer">
                 </div>
                 <div class="slide-inner">
-                    <img class="slide-img" src="img/slider/pain.jpg" alt="dancer">
+                    <img class="slide-img" src="img/slider/pain.webp" alt="dancer">
                 </div>
             </div>
         </div>
@@ -100,92 +100,104 @@
         <div class="cross"></div>
     </div>
 
-
-    <div class="common-styles">
-        <p class="chapter">Die Tänzerin</p>
-
-        <div class="common-styles-wrapper">
-            <div class="main-img">
-                <img class="img" src="img/slider/cats.jpg" alt="dancer">
-            </div>
-
-            <div class="wrapper-right">
-                <div class="inner-content">
-                    <div class="img-wrapper">
-                        <div class="img-block-right">
-                            <img class="img-right" src="img/slider/cats.jpg" alt="dancer">
+    <div class="wrapper">
+        <div class="content">
+        
+            <div class="common-styles">
+                <div class="chapter">Die Tänzerin</div>
+        
+                <div class="common-styles-wrapper">
+                    <div class="main-img">
+                        <img class="img" src="img/slider/cats.webp" alt="dancer">
+                    </div>
+        
+                    <div class="wrapper-right">
+                        <div class="inner-content">
+                            <div class="img-wrapper">
+                                <div class="img-block-right">
+                                    <img class="img-right" src="img/slider/cats.webp" alt="dancer">
+                                </div>
+                                <div class="img-block-right">
+                                    <img class="img-right" src="img/slider/bcar.webp" alt="dancer">
+                                </div>
+                                <div class="img-block-right">
+                                    <img class="img-right" src="img/slider/dino.webp" alt="dancer">
+                                </div>
+                                <div class="img-block-right">
+                                    <img class="img-right" src="img/slider/wcar1.webp" alt="dancer">
+                                </div>
+                                <div class="img-block-right">
+                                    <img class="img-right" src="img/slider/wcar2.webp" alt="dancer">
+                                </div>
+                                <div class="img-block-right">
+                                    <img class="img-right" src="img/slider/wcar3.webp" alt="dancer">
+                                </div>
+                                <div class="img-block-right">
+                                    <img class="img-right" src="img/slider/world.webp" alt="dancer">
+                                </div>
+                                <div class="img-block-right">
+                                    <img class="img-right" src="img/slider/pain.webp" alt="dancer">
+                                </div>
+                            </div>
                         </div>
-                        <div class="img-block-right">
-                            <img class="img-right" src="img/slider/bcar.jpg" alt="dancer">
-                        </div>
-                        <div class="img-block-right">
-                            <img class="img-right" src="img/slider/dino.jpg" alt="dancer">
-                        </div>
-                        <div class="img-block-right">
-                            <img class="img-right" src="img/slider/wcar1.jpg" alt="dancer">
-                        </div>
-                        <div class="img-block-right">
-                            <img class="img-right" src="img/slider/wcar2.jpg" alt="dancer">
-                        </div>
-                        <div class="img-block-right">
-                            <img class="img-right" src="img/slider/wcar3.jpg" alt="dancer">
-                        </div>
-                        <div class="img-block-right">
-                            <img class="img-right" src="img/slider/world.jpg" alt="dancer">
-                        </div>
-                        <div class="img-block-right">
-                            <img class="img-right" src="img/slider/pain.jpg" alt="dancer">
+        
+                        <div class="title">
+                            <div class="title-info">
+                                <div class="info">
+                                    <div id="size-wrapp" class="info-wrapper">
+                                        <div class="info-arrow">
+                                            <div id="size-arrow" class="arrow-inner"></div>
+                                        </div>
+                                        <div id="size-title" class="info-title">Größe</div>
+                                    </div>
+                                    <div id="size-descr" class="info-descr">
+                                        <span>102 cm × 82cm</span>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div id="material-wrapp" class="info-wrapper">
+                                        <div class="info-arrow">
+                                            <div id="material-arrow" class="arrow-inner"></div>
+                                        </div>
+                                        <div id="material-title" class="info-title">Material Rahmen</div>
+                                    </div>
+                                    <div id="material-descr" class="info-descr">
+                                        <span>Teilholz & Leichtmaterial</span>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div id="price-wrapp" class="info-wrapper">
+                                        <div class="info-arrow">
+                                            <div id="price-arrow" class="arrow-inner"></div>
+                                        </div>
+                                        <div id="price-title" class="info-title">Preis</div>
+                                    </div>
+                                    <div id="price-descr" class="info-descr">
+                                        <span>16.000€</span>
+                                    </div>
+                                </div>
+                                <a class="ihfo-link" href="contacts.html">weitere Informationen</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="title">
-                    <div class="title-info">
-                        <div class="info">
-                            <div id="size-wrapp" class="info-wrapper">
-                                <div class="info-arrow">
-                                    <div id="size-arrow" class="arrow-inner"></div>
-                                </div>
-                                <div id="size-title" class="info-title">Größe</div>
-                            </div>
-                            <div id="size-descr" class="info-descr">
-                                <span>102 cm × 82cm</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div id="material-wrapp" class="info-wrapper">
-                                <div class="info-arrow">
-                                    <div id="material-arrow" class="arrow-inner"></div>
-                                </div>
-                                <div id="material-title" class="info-title">Material Rahmen</div>
-                            </div>
-                            <div id="material-descr" class="info-descr">
-                                <span>Teilholz & Leichtmaterial</span>
-                            </div>
-                        </div>
-                        <div class="info">
-                            <div id="price-wrapp" class="info-wrapper">
-                                <div class="info-arrow">
-                                    <div id="price-arrow" class="arrow-inner"></div>
-                                </div>
-                                <div id="price-title" class="info-title">Preis</div>
-                            </div>
-                            <div id="price-descr" class="info-descr">
-                                <span>16.000€</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
+        
+            <div class="chapter chapter-projects">Weitere Projekte</div>
+            
+            <div class="projects">
+                <a class="project-img active" href="electrician.html">
+                    <img src="img/slider/bcar.webp" alt="photo">
+                </a>
+                <a class="project-img active" href="nostalgia.html">
+                    <img src="img/slider/world.webp" alt="photo">
+                </a>
+            </div>
+        
+            <footer class="footer">
+                <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
+            </footer>
         </div>
     </div>
-
-    <footer class="footer">
-        <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
-    </footer>
-
-
-    <script src="js/script.js"></script>
-    <script src="js/project.js"></script>
 </body>
 </html>

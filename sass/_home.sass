@@ -1,37 +1,77 @@
-.wish
-    margin: 0 auto
-    margin-top: 30px
-    padding: 20px
-    text-align: center
-    align-items: center
-
-    .wish-wrapper
-        max-width: 600px
-        margin: 0 auto
-
-        h1
-            margin: 0
-            font-size: 42px
-
-.chapter
-    position: relative
-    text-align: center
-    font-size: 32px
-    font-weight: 700
-    margin: 40px auto
-    
 .home
     display: flex
     flex-direction: column
     flex-wrap: wrap
+    position: relative
     padding: 50px
+    padding-bottom: 120px
 
+
+    .wish
+        position: relative
+        display: flex
+        height: 100vh
+        margin: 0 auto
+        text-align: center
+        align-items: center
+
+        .bg-brush6
+            position: absolute
+            top: 32%
+            left: -45%
+            z-index: -1
+            width: 800px
+            height: 200px
+            transform: rotate(-30deg)
+            background: url("../img/brush-6.svg") center/cover no-repeat
+            opacity: .5
+
+        .wish-wrapper
+            max-width: 600px
+            margin: 0 auto
+
+            h1
+                margin: 0
+                font-size: 42px
+
+            .wish-descr
+                font-size: 18px
+                letter-spacing: 1px
+                margin-bottom: 60px
+
+            .btn
+                width: 40px
+                height: 40px
+                margin: 0 auto
+                background-color: rgba(0,0,0,0)
+                border: 4px solid #fff
+                border-radius: 10px
+                transform: rotate(45deg)
+                border-left: none
+                border-top: none
+                cursor: pointer
+
+                .btn-inner
+                    width: 20px
+                    height: 20px
+                    margin: 0 auto
+                    background-color: rgba(0,0,0,0)
+                    border: 3px solid #fff
+                    border-radius: 5px
+                    border-left: none
+                    border-top: none
+
+            
+    
     .home-wrapper
+        position: relative
         display: flex
         justify-content: center
+        flex-wrap: wrap
+        margin-top: 20px
 
         .img-block
-            width: 25%
+            max-width: 420px
             margin: 20px
             border: 2px solid #fff
             box-shadow: 0px 22px 14px 0px rgba(0,0,0, .3)
@@ -39,31 +79,46 @@
 
             img
                 display: block
-                width: 100%
+                width: 380px
 
         .active
             position: relative
             z-index: 0
 
+
+
+        .active:before
+            content: ""
+            position: absolute
+            bottom: -180%
+            width: 100%
+            height: 100%
+            padding: 20px 20px
+            transform: translateY(-50%)
+            background-color: #0000006f
+            border-right: none
+            z-index: 1
+            transition: .5s all
+
+        .active:hover:before
+            bottom: -60%
+
         .active:after
             content: ""
             position: absolute
-            bottom: 0px
-            right: -100%
-            padding: 20px 20px
-            transform: translateY(-50%)
-            background-color: #000000b5
-            border: 2px solid #fff
-            border-right: none
+            left: 0
+            bottom: -100%
             z-index: 1
-            color: #fff
-            font-size: 42px
-            text-align: right
-            transition: .4s
+            width: 100%
+            height: 5%
+            text-align: center
+            font-size: 28px
+            color: #ffffff
+            transition: .8s all
 
         .active:hover:after
-            transition: .4s
-            right: 0%
+            bottom: 50%
+            transform: translateY(50%)
 
         .home-dancer:after
             content: "Die Tänzerin"
@@ -72,16 +127,8 @@
             content: "Der Elektriker"
 
         .home-people:after
-            content: "Nostalgie"
+            content: "Die Nostalgie"
 
-
-@media screen and (max-width: 1599px)
-    .home
-        .home-wrapper
-            .img-block
-
-            .active:after
-                font-size: 32px
 
 @media screen and (max-width: 1299px)
     .home
@@ -89,81 +136,117 @@
             .img-block
 
             .active:after
-                font-size: 20px
-                padding: 15px
+                padding: 10px
 
 @media screen and (max-width: 1099px)
-    .wish
-        .wish-wrapper
-            h1
-                font-size: 32px
-    .home
-        .home-wrapper
-            .img-block
 
-            .active:after
-                padding: 10px
+    .home
+
+        .wish
+
+            .bg-brush6
+                top: 25%
+                left: -25%
+                z-index: -1
+                width: 600px
+                height: 200px
+
+            .wish-wrapper
+                h1
+                    font-size: 32px
 
 
 @media screen and (max-width: 899px)
     .home
-        .home-wrapper
-            .img-block
+        .wish
 
-            .active:after
-                font-size: 18px
+            .bg-brush6
+                top: 25%
+                left: -15%
+                z-index: -1
+                width: 500px
            
 
 @media screen and (max-width: 799px)
     .home
         justify-content: space-around
-        padding: 30px
-        padding-top: 120px
 
         .home-wrapper
 
-            .img-block
-                width: 40%
-                margin: 10px
-
             .active:after
-            font-size: 26px
+                font-size: 26px
 
     
 @media screen and (max-width: 699px)
     .home
         .home-wrapper
             flex-wrap: wrap
-            .img-block
 
             .active:after
                 font-size: 22px
 
 @media screen and (max-width: 599px)
     .home
+        padding: 50px 20px
+
+        .wish
+
+            .bg-brush6
+                top: 20%
+                width: 420px
+
         .home-wrapper
+
             .img-block
-                width: 70%
-                margin-bottom: 60px
+                max-width: 380px
+
+                img
+                    width: 100%
 
             .active:after
                 font-size: 32px
 
 @media screen and (max-width: 499px)
     .home
+
+        .wish
+
+            .bg-brush6
+                top: 20%
+                width: 380px
+
+            .wish-wrapper
+
+                h1
+                    font-size: 28px
+
+                .wish-descr
+                    font-size: 16px
+                    line-height: 24px
+
+        .chapter
+            font-size: 22px
+
         .home-wrapper
+            margin-top: 0px
+
             .img-block
+                max-width: 100%
+
+                img
+                    width: 100%
 
             .active:after
                 font-size: 26px
 
 @media screen and (max-width: 399px)
-    .wish
-        padding: 0
     .home
+        .wish
+            .bg-brush6
+                top: 10%
+                width: 300px
+
         .home-wrapper
-            .img-block
-                width: 100%
 
             .active:after
                 font-size: 22px

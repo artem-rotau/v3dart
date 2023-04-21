@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/project.js" defer></script>
+    <script src="js/script.js" defer></script>
     <title>Impressum</title>
 </head>
 <body>
-    <div class="preloader">
-        <div class="preloader-row">
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-        </div>
-    </div>
     
     <header class="header">
         <a href="index.html">
@@ -46,6 +45,9 @@
         </div>
 
         <div class="hidden-menu">
+            <span class="autor">Victor's<br>
+                <span class="autor-down">3D Art</span>
+            </span>
             <ul class="hidden-menu-list">
                 <div class="hidden-links-list">
                     <li class="hidden-link"><a href="index.html">Projekte</a></li>
@@ -56,54 +58,56 @@
         </div>
     </header>
 
-    <section class="important">
-        <div class="inner">
-            <h5>Impressum</h5>
-            <h2>Angaben gemäß § 5 TMG:</h2>
-
-            <div class="address">
-                Viktor Krjutschkow <br>
-                Magdeburger-Chaussee 56 <br>
-                D-06118 Halle/Saale <br>
-            </div>
-
-            <h2>Kontakt:</h2>
-            <p>E-Mail: <b>viktork2@yahoo.com</b></p>
-
-            <h2>Streitschlichtung</h2>
-            <p>
-                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) <br>
-                bereit: <span class="important-link">https://ec.europa.eu/consumers/odr</span>.
-                Unsere E-Mail-Adresse finden Sie oben im Impressum.
-
-                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-                Verbraucherschlichtungsstelle teilzunehmen.
-            </p>
-
-            <h2>Urheberrecht</h2>
-            <p>
-                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
-            </p>
-            <p>
-                Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-            </p>
-
-            <h2>Bildnachweis</h2>
-            <p>Diese Seite enthält Bilder von Victor's 3D Art</p>
-
-            <h2>Concept & Design</h2>
-            <div class="address">
-                Inhaber: Artem Rotau<br>
-                E-Mail: <b>artemrotau@gmail.com</b>
-            </div>
-                
+    <div class="wrapper">
+        <div class="content">
+            <section class="important">
+                <div class="inner">
+                    <h5>Impressum</h5>
+                    <h2>Angaben gemäß § 5 TMG:</h2>
+        
+                    <div class="address">
+                        Viktor Krjutschkow <br>
+                        Magdeburger-Chaussee 56 <br>
+                        D-06118 Halle/Saale <br>
+                    </div>
+        
+                    <h2>Kontakt:</h2>
+                    <p>E-Mail: <b>viktork2@yahoo.com</b></p>
+        
+                    <h2>Streitschlichtung</h2>
+                    <p>
+                        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) <br>
+                        bereit: <span class="important-link">https://ec.europa.eu/consumers/odr</span>.
+                        Unsere E-Mail-Adresse finden Sie oben im Impressum.
+        
+                        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+                        Verbraucherschlichtungsstelle teilzunehmen.
+                    </p>
+        
+                    <h2>Urheberrecht</h2>
+                    <p>
+                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+                    </p>
+                    <p>
+                        Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                    </p>
+        
+                    <h2>Bildnachweis</h2>
+                    <p>Diese Seite enthält Bilder von Victor's 3D Art</p>
+        
+                    <h2>Concept & Design</h2>
+                    <div class="address">
+                        Inhaber: Artem Rotau<br>
+                        E-Mail: <b>artemrotau@gmail.com</b>
+                    </div>
+                        
+                </div>
+            </section>
+        
+            <footer class="footer">
+                <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
+            </footer>
         </div>
-    </section>
-
-    <footer class="footer">
-        <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
-    </footer>
-    
-    <script src="js/script.js"></script>
+    </div>
 </body>
 </html>

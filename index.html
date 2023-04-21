@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#ffad33">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+
     <link rel="stylesheet" href="css/style.min.css">
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/script.js" defer></script>
     <title>Victor's 3D Art</title>
 </head>
-<body class="home-body">
-    <div class="preloader">
-        <div class="preloader-row">
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-        </div>
-    </div>
 
-    <div class="bg-img"></div>
-    <header class="header">
+<body>
+    <header class="header header-mod">
         <a href="index.html">
             <span class="autor">Victor's<br>
                 <span class="autor-down">3D Art</span>
@@ -47,49 +52,56 @@
         </div>
 
         <div class="hidden-menu">
+            <span class="autor">Victor's<br>
+                <span class="autor-down">3D Art</span>
+            </span>
             <ul class="hidden-menu-list">
-                <div class="hidden-links-list">
-                    <li class="hidden-link"><a href="index.html">Projekte</a></li>
-                    <li class="hidden-link"><a href="about.html">Über mich</a></li>
-                    <li class="hidden-link"><a href="contacts.html">Kontakte</a></li>
-                </div>
+                <li class="hidden-link"><a href="index.html">Projekte</a></li>
+                <li class="hidden-link"><a href="about.html">Über mich</a></li>
+                <li class="hidden-link"><a href="contacts.html">Kontakte</a></li>
             </ul>
         </div>
     </header>
-
-    <div class="home">
-        <div class="wish">
-            <div class="wish-wrapper">
-                <h1 class="wish-name">Hallo, mein Name ist Victor</h1>
-                <div class="wish-line"></div>
-                <p class="wish-descr">
-                    Mein größter Wunsch und Ziel ist es zu erreichen,
-                    dass meine Bilder eine positive Energie ausstrahlen.
-                    Dabei soll es unmöglich sein, vor lauter Staunen
-                    die Augen von meinen Werken abzuwenden.
-                </p>
+        
+    <div class="wrapper">
+        <div class="content">
+            <div class="home">
+                <div class="wish">
+                    <div data-speed=".1" class="bg-brush6"></div>
+                    <div class="wish-wrapper">
+                        <h1 class="wish-name">Hallo, mein Name ist Victor</h1>
+                        <div class="wish-line"></div>
+                        <p class="wish-descr">
+                            Mein größter Wunsch und Ziel ist es zu erreichen,
+                            dass meine Bilder eine positive Energie ausstrahlen.
+                            Dabei soll es unmöglich sein, vor lauter Staunen
+                            die Augen von meinen Werken abzuwenden.
+                        </p>
+                        <button class="btn">
+                            <div class="btn-inner"></div>
+                        </button>
+                    </div>
+                </div>
+        
+                <div id="galerie" class="chapter">Galerie</div>
+        
+                <div class="home-wrapper">
+                    <a class="img-block active home-dancer" href="dancer.html">
+                        <img src="img/slider/cats.webp" alt="photo">
+                    </a>
+                    <a class="img-block active home-3d" href="electrician.html">
+                        <img src="img/slider/bcar.webp" alt="photo">
+                    </a>
+                    <a class="img-block active home-people" href="nostalgia.html">
+                        <img src="img/slider/world.webp" alt="photo">
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <p class="chapter">Galerie</p>
-
-        <div class="home-wrapper">
-            <a class="img-block active home-dancer" href="dancer.html">
-                <img src="img/slider/cats.jpg" alt="photo">
-            </a>
-            <a class="img-block active home-3d" href="electrician.html">
-                <img src="img/slider/bcar.jpg" alt="photo">
-            </a>
-            <a class="img-block active home-people" href="nostalgia.html">
-                <img src="img/slider/world.jpg" alt="photo">
-            </a>
+            <footer class="footer">
+                <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
+            </footer>
         </div>
     </div>
-
-    <footer class="footer">
-        <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
-    </footer>
-    
-    <script src="js/script.js"></script>
 </body>
 </html>

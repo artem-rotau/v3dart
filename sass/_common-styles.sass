@@ -17,32 +17,32 @@
             display: flex
             align-items: center
 
+            .slide-inner
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 520px
+                height: 100vh
+                overflow: hidden
+                cursor: zoom-in
 
-        .slide-inner
-            display: flex
-            justify-content: center
-            height: 100vh
-            overflow: hidden
-            cursor: zoom-in
+                .slide-img
+                    max-width: 440px
 
-            .slide-img
+                .slide-img-big
+                    max-width: 100%
 
-            .slide-img-big
-                width: 100%
-                margin: 5px
-
-        .slide-inner-big
-            width: 100%
-            height: 100%
-            cursor: zoom-out
-                
+            .slide-inner-big
+                height: 100%
+                cursor: zoom-out
+                    
     .arrows
 
         .arrow
             position: fixed
             top: 0
             z-index: 100
-            width: 10%
+            width: 15%
             height: 100vh
             cursor: pointer
             transition: .2s all
@@ -52,7 +52,7 @@
 
             .arrow-n
                 position: absolute
-                right: 50%
+                right: 40%
                 top: 50%
                 transform: rotate(-45deg)
                 width: 20px
@@ -69,7 +69,7 @@
 
             .arrow-p
                 position: absolute
-                left: 50%
+                left: 40%
                 top: 50%
                 transform: rotate(135deg)
                 width: 20px
@@ -127,29 +127,30 @@
         display: none
 
 
-
-
 .common-styles
+    position: relative
     width: 100%
     padding: 60px 30px
     padding-bottom: 120px
     margin: 0 auto
 
-    .chapter
 
     .common-styles-wrapper
         display: flex
         justify-content: center
+        margin-top: 50px
 
         .main-img
-            max-width: 480px
-            max-height: 720px
+            opacity: 0
+            max-width: 380px
+            height: auto
+            transition: .9s all
             overflow: hidden
 
             .img
                 width: 100%
-                // border: 2px solid #4e5b71
-                // border: 2px solid #fff
+                height: auto
+                border: 2px solid #fff
 
         .wrapper-right
             width: 35%
@@ -167,29 +168,25 @@
                     flex-wrap: wrap
 
                     .img-block-right
-                        width: 100px
-                        height: 100px
                         margin: 5px
-                        // border: 2px solid #4e5b71
-                        border: 2px solid #fff
-                        // box-shadow: 0px 8px 4px 0px rgba(0,0,0, .2)
-                        overflow: hidden
                         cursor: pointer
                         transition: .2s all
+                        opacity: 0
+                        transform: rotateY(90deg)
 
                         .img-right
                             position: relative
-                            top: 0
-                            left: 50%
-                            z-index: -1
-                            transform: translateX(-50%)
-                            width: 200%
+                            z-index: -1         // without a negative z-index, the slider does not work correctly
+                            width: 100px
+                            height: 100%
+                            box-shadow: 0px 0px 1px 2px rgba(255,255,255, 1)
 
                     .img-block-right:hover
-                        border-color: #000
-                        box-shadow: 0px 0px 10px 3px rgba(255,255,255, 1)
+                        box-shadow: 0px 0px 4px 4px rgba(0,0,0, .5)
 
             .title
+                opacity: 0
+                transition: .5s all
                 text-align: center
 
                 .title-info
@@ -197,14 +194,11 @@
                     justify-content: space-between
 
                     .info
-                        position: relative
-                        margin: 10px 0
                         color: #4e5b71
 
                         .info-wrapper
                             display: flex
                             cursor: pointer
-                            box-shadow: 0px 22px 14px 0px rgba(0,0,0, .2)
 
                             .info-arrow
                                 position: relative
@@ -249,143 +243,108 @@
                         .info-descr-active
                             height: 60px
                             padding-top: 20px
+                            margin-bottom: 20px
                             background-color: #fff
-                            box-shadow: 0px 22px 14px 0px rgba(0,0,0, .2)
                             border: 2px solid #4e5b71
                             border-top: none
                             opacity: 1
 
+                    .ihfo-link
+                        display: block
+                        text-decoration: none
+                        text-transform: uppercase
+                        font-weight: 700
+                        color: #fff
+                        letter-spacing: 2px
+                        padding: 20px 5px
+                        border: 2px solid #fff
+                        width: 100%
+                        transition: .2s all
+
+                        &:hover
+                            background-color: #fff
+                            color: #fab13c
+
+
+.chapter-projects
+    padding-top: 20px
+
+.projects
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-top: 20px
+    margin-bottom: 90px
+
+    .project-img
+        margin: 10px
+
+        img
+            width: 180px
+            height: auto
+            box-shadow: 0px 0px 1px 2px rgba(255,255,255, 1)
+            transition: .2s all
+
+        img:hover
+            box-shadow: 0px 0px 4px 4px rgba(0,0,0, .5)
 
 
 // Media
 
-
-@media screen and (max-width: 1499px)
-    .slider
-
-        .slide-wrapper
-
-            .slide-inner
-                display: flex
-                align-items: center
-
-                .slide-img
-                    max-height: 620px
-
-                .slide-img-big
-                    width: 100%
-                    max-height: 100%
-                    margin: 5px
-
-            .slide-inner-big
-                width: 100%
-                height: 100%
-                cursor: zoom-out
-
-
-@media screen and (max-width: 1328px)
-
-    .chapter
-        margin-top: 20px
+@media screen and (max-width: 1399px)
 
     .common-styles
 
         .common-styles-wrapper
+            margin-top: 10px
 
-            .main-img
-                max-width: 420px
+    .img-right
+        max-width: 80px
 
-                
+@media screen and (max-width: 1328px)
+
+    .common-styles
+
+        .common-styles-wrapper
+            margin-top: 10px
+            
             .wrapper-right
                 margin: 0 30px
 
-                .inner-content
-
-                    .img-wrapper
-
-                        .img-block-right
-                            width: 90px
-                            height: 90px
-
 @media screen and (max-width: 1099px)
+    .slider
+
+        .slide-wrapper
+
+            .slide-content
+
+                .slide-inner
+
+                    .slide-img
+                        max-width: 420px
+
+                    .slide-img-big
+                        max-width: 100%
+
+    .chapter
+        font-size: 20px
+
+    .ihfo-link
+        font-size: 14px
+
+
+@media screen and (max-width:  899px)
 
     .common-styles
+        padding-bottom: 80px
 
-        .chapter
-
-            .chapter-dancer
-                width: 160px
-                font-size: 22px
-
-
-@media screen and (max-width:  999px)
-    .slider
-
-        .slide-wrapper
-
-            .slide-inner
-
-                .slide-img
-                    max-height: 520px
-
-                .slide-img-big
-                    width: 100%
-                    max-height: 100%
-                    margin: 5px
-
-            .slide-inner-big
-                width: 100%
-                height: 100%
-                cursor: zoom-out
-
-@media screen and (max-width: 899px)
-    .slider
-
-        .slide-wrapper
-
-            .slide-inner
-
-                .slide-img
-                    max-height: 420px
-
-                .slide-img-big
-                    width: 100%
-                    max-height: 100%
-                    margin: 5px
-
-            .slide-inner-big
-                width: 100%
-                height: 100%
-                cursor: zoom-out
-
+    .img-right
+        max-width: 75px
 
 @media screen and (max-width:  799px)
-    .slider
-
-        .slide-wrapper
-
-            .slide-inner
-
-                .slide-img
-                    max-height: 380px
-
-                .slide-img-big
-                    width: 100%
-                    max-height: 100%
-                    margin: 5px
-
-            .slide-inner-big
-                width: 100%
-                height: 100%
-                cursor: zoom-out
-
 
     .common-styles
         padding-bottom: 60px
-
-        .chapter
-            margin-top: 80px
-            margin-bottom: 20px
 
         .common-styles-wrapper
             flex-direction: column
@@ -406,55 +365,40 @@
                             max-width: 600px
                             margin: 10px auto
 
+                        .ihfo-link
+                            max-width: 600px
+                            margin: 10px auto
+
+
 @media screen and (max-width: 599px)
     .slider
 
         .slide-wrapper
+            
+            .slide-content
 
-            .slide-inner
+                .slide-inner
 
-                .slide-img
-                    max-height: 320px
+                    .slide-img
+                        max-width: 300px
 
-                .slide-img-big
-                    width: 100%
-                    max-height: 100%
-                    margin: 5px
+                    .slide-img-big
+                        max-width: 100%
 
-            .slide-inner-big
-                width: 100%
-                height: 100%
-                cursor: zoom-out
+    .wrapper
+        .content
+            .common-styles
+                .chapter
+                    padding-top: 60px
 
 
 @media screen and (max-width: 499px)
-    .slider
-
-        .slide-wrapper
-
-            .slide-inner
-
-                .slide-img
-                    max-width: 620px
-                    max-height: 220px
-
-                .slide-img-big
-                    width: 100%
-                    max-height: 100%
-                    margin: 5px
-
-            .slide-inner-big
-                width: 100%
-                height: 100%
-                cursor: zoom-out
 
     .common-styles
-
-        .chapter
-            margin-top: 60px
-            font-size: 26px
+        padding-bottom: 30px
 
         .common-styles-wrapper
+            margin-top: 0
 
             .main-img
                 max-height: 580px
@@ -466,8 +410,18 @@
                     .img-wrapper
 
                         .img-block-right
-                            width: 80px
-                            height: 80px
+
+                            .img-right
+                                width: 80px
+
+    .projects
+        margin-top: 10px
+
+        .project-img
+            margin: 5px
+
+            img
+                width: 100px
 
 
 @media screen and (max-width: 399px)
@@ -475,31 +429,19 @@
 
         .slide-wrapper
 
-            .slide-inner
+            .slide-content
 
-                .slide-img
-                    max-height: 180px
+                .slide-inner
 
-                .slide-img-big
-                    width: 100%
-                    max-height: 100%
-                    margin: 5px
+                    .slide-img
+                        max-width: 220px
 
-            .slide-inner-big
-                width: 100%
-                height: 100%
-                cursor: zoom-out
+                    .slide-img-big
+                        max-width: 100%
 
     .common-styles
 
-        .chapter
-            font-size: 20px
-
         .common-styles-wrapper
-
-            .main-img
-                max-height: 500px
-
                 
             .wrapper-right
 
@@ -508,8 +450,15 @@
                     .img-wrapper
 
                         .img-block-right
-                            width: 60px
-                            height: 60px
 
+                            .img-right
+                                width: 60px
 
+    .projects
+
+        .project-img
+            margin: 5px
+
+            img
+                width: 80px
 

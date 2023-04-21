@@ -5,18 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/jquery.js"></script>
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/project.js" defer></script>
+    <script src="js/script.js" defer></script>
     <title>Kontakte</title>
 </head>
 <body class="contacts-body">
-    <div class="preloader">
-        <div class="preloader-row">
-            <div class="preloader-item"></div>
-            <div class="preloader-item"></div>
-        </div>
-    </div>
-
-    <div class="bg-img"></div>
+    
     <header class="header">
         <a href="index.html">
             <span class="autor">Victor's<br>
@@ -48,6 +45,9 @@
         </div>
 
         <div class="hidden-menu">
+            <span class="autor">Victor's<br>
+                <span class="autor-down">3D Art</span>
+            </span>
             <ul class="hidden-menu-list">
                 <div class="hidden-links-list">
                     <li class="hidden-link"><a href="index.html">Projekte</a></li>
@@ -58,36 +58,39 @@
         </div>
     </header>
 
-    <section class="contacts">
-        <div class="contacts-wrapper">
-            <div class="contacts-inner">
-                <h1 class="contacts-title">Kontakt</h1>
-                <form class="form" action="mailer/smart.php" method="POST">
-                    <label for="name">Ihr Name:</label>
-                    <input id="name" type="text" name="name" required placeholder="Name">
-    
-                    <label for="email">Ihr E-mail:</label>
-                    <input id="email" type="email" name="email" required placeholder="E-mail">
-    
-                    <label for="komment">Ihr Nachricht:</label>
-                    <textarea id="komment" type="text" name="komment" required placeholder="Nachricht"></textarea>
-    
-                    <div class="agreement">
-                        <input id="agr" class="checkbox" type="checkbox" name="checkbox" required>
-                        <label class="agreement-descr" for="agr">
-                            Ich Stimme Zu, Dass Meine Angaben Aus Dem Kontaktformular Zur Beantwortung Meiner Anfrage Erhoben Und Verarbeitet Werden. Die Daten Werden Nach Abgeschlossener Bearbeitung Ihrer Anfrage Gelöscht. Hinweis: Sie Können Ihre Einwilligung Jederzeit Für Die Zukunft Per E-Mail (Viktork2@Yahoo.com) Widerrufen. Detailierte Information Zum Umgang Mit Nutzerdaten Finden Sie In Unserer Datenschutzerklärung.
-                        </label>
+    <div class="wrapper">
+        <div class="content">
+            <section class="contacts">
+                <div class="contacts-wrapper">
+                    <div class="contacts-inner">
+                        <h1 class="contacts-title">Kontakt</h1>
+                        <form enctype="multipart/form-data" class="form" onsubmit="send(event, 'send.php')" method="post">
+                            <label for="name">Ihr Name:</label>
+                            <input id="name" type="text" name="name" required placeholder="Name">
+            
+                            <label for="email">Ihr E-mail:</label>
+                            <input id="email" type="email" name="email" required placeholder="E-mail">
+            
+                            <label for="komment">Ihr Nachricht:</label>
+                            <textarea id="komment" type="text" name="text" required placeholder="Nachricht"></textarea>
+            
+                            <div class="agreement">
+                                <input id="agr" class="checkbox" type="checkbox" name="checkbox" required>
+                                <label class="agreement-descr" for="agr">
+                                    Ich Stimme Zu, Dass Meine Angaben Aus Dem Kontaktformular Zur Beantwortung Meiner Anfrage Erhoben Und Verarbeitet Werden. Die Daten Werden Nach Abgeschlossener Bearbeitung Ihrer Anfrage Gelöscht. Hinweis: Sie Können Ihre Einwilligung Jederzeit Für Die Zukunft Per E-Mail (Viktork2@Yahoo.com) Widerrufen. Detailierte Information Zum Umgang Mit Nutzerdaten Finden Sie In Unserer Datenschutzerklärung.
+                                </label>
+                            </div>
+            
+                            <button class="submit" type="submit" name="submit">Senden</button>
+                        </form>
                     </div>
-    
-                    <button class="submit">Senden</button>
-                </form>
-            </div>
+                </div>
+            </section>
+        
+            <footer class="footer contacts-footer">
+                <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
+            </footer>
         </div>
-    </section>
-
-    <footer class="footer contacts-footer">
-        <span>Copyright © 2023 Victor's 3D Art | Powered by Artem Rotau | <a href="imprint.html">Impressum</a> | <a href="policy.html">Datenschutz</a></span>
-    </footer>
-    <script src="js/script.js"></script>
+    </div>
 </body>
 </html>
